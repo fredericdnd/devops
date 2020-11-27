@@ -6,6 +6,6 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-server.listen(process.env.PORT, "0.0.0.0", () => {
+app.listen(process.env.PORT, "0.0.0.0", () => {
   console.log(`App listening at http://0.0.0.0:${process.env.PORT}`);
 });
