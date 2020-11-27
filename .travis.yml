@@ -1,4 +1,7 @@
 language: generic
 
+before_install:
+  - npm install
+
 after_success:
   - .travis/push.sh
