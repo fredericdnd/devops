@@ -1,11 +1,11 @@
 const express = require("express");
 const app = express();
-const port = 8080;
+const path = require("path");
 
 app.get("/", (req, res) => {
-  res.send("Hello World - Frédéric Dinand");
+  res.sendFile(path.join(__dirname + "/index.html"));
 });
 
-app.listen(process.env.PORT, "0.0.0.0", () => {
-  console.log(`App listening at http://0.0.0.0:${process.env.PORT}`);
+app.listen(8080, "0.0.0.0", () => {
+  console.log(`App listening at http://0.0.0.0:8080`);
 });
